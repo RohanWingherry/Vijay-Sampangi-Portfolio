@@ -139,6 +139,25 @@ function checkWordLimit() {
   }
 }
 
+// Spinner
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".spin-container");
+
+  // Ensure the loader is visible for at least 5 seconds
+  setTimeout(() => {
+    // Add the class to hide the loader (assuming you have CSS for the transition)
+    loader.classList.add("loader-hidden");
+
+    // When the transition ends, remove the loader from the DOM
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  }, 3500); // 5000ms = 5 seconds
+});
+
+
+
+
 
 
 

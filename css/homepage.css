@@ -3,7 +3,72 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Spinner */
+.spin-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    transform: opacity 0.75s, visibility 0.75s;
+    z-index: 1100;
+  }
+  .loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .spin-box {
+    position: relative;
+    font-size: 40px;
+  }
+  
+  #spin-text {
+    display: inline-block;
+    padding: 5px 0px;
+    color: #5D5CDC;
+  }
+  
+  .spin-dot {
+    position: absolute;
+    background-color: #FEB12F;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    animation: spinMoveDot 2.5s linear infinite;
+  }
+  
+  @keyframes spinMoveDot {
+    0% {
+      left: 15px;  
+      top: 0;
+    }
+    20% {
+      left: 15px; 
+      top: 0;
+    }
+    40% {
+      left: 115px; 
+      top: 0;
+    }
+    60% {
+      left: 115px;  
+      top: 0;
+    }
+    80% {
+      left: 310px; 
+      top: 20px;
+    }
+    100% {
+      left: 310px; 
+      top: 20px;
+    }
+  }
 /* progress bar */
 .main-portfolio  #scroll-progress-container {
     position: fixed;
