@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/maincontent.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -22,10 +24,10 @@
             <!-- image section -->
             <div class="homepage-image-section">
                 <div id="yuktha-image-section">
-                    <img src="../assets/yuktha.png" alt="">
+                    <img src="../assets/yuktha-logo.svg" alt="">
                 </div>
                 <div id="wingherry-image-section">
-                    <img src="../assets/wingherry.png" alt="">
+                    <img src="../assets/wingherry-logo.svg" alt="">
                 </div>
             </div>
 
@@ -34,30 +36,139 @@
                 <!-- Introduction Section -->
                 <div class="main-into-section">
                     <div class="dot-section">
-                        <img src="../assets/dots.png" alt="">
+                        <img class="dot" src="../assets/dot.svg" alt="">
+                        <img class="dot" src="../assets/dot.svg" alt="">
+                        <img class="dot" src="../assets/dot.svg" alt="">
+                        <img class="dot" src="../assets/dot.svg" alt="">
+                        <img class="dot" src="../assets/dot.svg" alt="">
                     </div>
                     <div class="main-into">
                         <div id="hello">Hello, I'm</div>
                         <div id="vijay">Vijay Sampangi</div>
                         <div id="chairman">Chairman of Yuktha Constructions</div>
-                        <div id="chairman-desc">Yuktha Earth Manner, Machinery, and Constructions, and a key partner in several successful ventures, Vijay has consistently demonstrated his ability to lead complex projects with precision and deliver exceptional outcomes. His career trajectory—from corporate relations and healthcare operations to founding...</div>
-                        <div id="getintouchbtn">Get in Touch</div>
+                        <div id="chairman-desc">As a co-founder of Yuktha Constructions, I’m proud to lead a company dedicated to delivering high-quality residential, commercial, and industrial projects. We specialize in construction, interior design, smart home solutions, and eco-friendly installations like solar systems. With a focus on quality, timely delivery, and customer satisfaction, we’re creating innovative spaces where people and businesses thrive.</div>
+                        <div id="getintouchbtn" class="btn">Get in Touch</div>
                     </div>
                     <div class="curl-arrow">
-                        <img src="../assets/tilt-arrow.png" alt="">
+                        <img src="../assets/tiltarrow-unscreen.gif" alt="">
                     </div>
                 </div>
                 <!-- Profile Section -->
                 <div class="main-profile-section">
                     <div class="profile-sec">
-                        <img id="profile-bg" src="../assets/profilebg.png" alt="">
-                        <img id="profile-pic" src="../assets/vijay-profile.png" alt="">
+                        <img id="profile-bg" src="../assets/profile-bg.svg" alt="">
+                        <img id="profile-pic" src="../assets/profile-pic.svg" alt="">
                     </div>
                     <div class="profile-dot-section">
-                        <img src="../assets/dots.png" alt="">
-                    </div>
+                        <img class="dot-profile" src="../assets/dot.svg" alt="">
+                        <img class="dot-profile" src="../assets/dot.svg" alt="">
+                        <img class="dot-profile" src="../assets/dot.svg" alt="">
+                        <img class="dot-profile" src="../assets/dot.svg" alt="">
+                        <img class="dot-profile" src="../assets/dot.svg" alt="">
+                    </div>                    
                 </div>
              </div>
+             <!-- Modal for the get in touch -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="content-holder-box">
+                        <div class="content-headings">
+                            <div class="lines"></div>
+                            <div class="content-holder-heading">Get in Touch</div>
+                            <div class="lines"></div>
+                        </div>
+                    </div>
+                    <form id="contactForm">
+                        <div>
+                            <label for="firstName">First Name :</label>
+                            <input type="text" id="firstName" class="names" name="firstName" placeholder="Enter First Name.." required>
+                        </div>
+                        
+                        <div>
+                            <label for="lastName">Last Name :</label>
+                            <input type="text" id="lastName" class="names" name="lastName" placeholder="Enter Last Name.." required>
+                        </div>
+                        
+                        <div class="textarea">
+                            <label for="organisation">Organisation :</label>
+                            <input type="text" id="organisation" name="organisation" placeholder="Enter Organisation Name.." required>
+                        </div>
+                        
+                        <div class="textarea">
+                            <label for="title">Title :</label>
+                            <input type="text" id="title" name="title" placeholder="Title .." required>
+                        </div>
+                        
+                        <div class="textarea">
+                            <label for="businessEmail">Business Email :</label>
+                            <input type="email" id="businessEmail" name="businessEmail" placeholder="Enter Business Email.." required>
+                        </div>
+                        
+                        <div class="textarea">
+                            <label for="enquireAbout">Enquire About :</label>
+                            <textarea id="enquireAbout" name="enquireAbout" placeholder="Enquire about" required oninput="checkWordLimit()" maxlength="1000" rows="5"></textarea>
+                            <p id="wordCount">Word count: 0/250</p>
+                        </div>
+                        
+                        <span id="submitBtn">Submit</span>
+                  </form>
+                </div>
+            </div>
+         </div>
+
+         <!-- In Association  -->
+         <div class="content-holder-box">
+            <div class="content-headings">
+                <div class="lines"></div>
+                <div class="content-holder-heading">In Association</div>
+                <div class="lines"></div>
+            </div>
+            <div class="association-main-box">
+                <div class="association-boxes">
+                    <div class="association-box">
+                        <img src="../assets/association.svg" alt="">
+                        <div>Vigilance Director <span>Human Rights</span></div>
+                    </div>
+                    <div class="association-box">
+                        <img src="../assets/association.svg" alt="">
+                        <div>Telangana Contarctors Association <span>Member</span></div>
+                    </div>
+                    <div class="association-box">
+                        <img src="../assets/mithra.svg" alt="">
+                        <div>Mithra Events <span>Co-Partner</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+         <div class="main-footer">
+            <div class="main-footer-info">
+                <div class="footer-info">
+                    <div class="info-details">
+                        <img src="../assets/user-icon.svg" alt="">
+                        <span>Vijay Sampangi</span>
+                    </div>
+                    <div class="info-details">
+                        <img src="../assets/phone-icon.svg" alt="">
+                        <span>+91- 9985752406</span>
+                    </div>
+                    <div class="info-details">
+                        <img src="../assets/map-icon.svg" alt="">
+                        <span>Banjara hills Hyderabad</span>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <img src="../assets/facebook.svg" alt="" onclick="window.location.href='https://www.facebook.com/share/1BE7RgF68c/'" >
+                    <img src="../assets/instagram.svg" alt="" onclick="window.location.href='https://www.instagram.com/visheysampangi?igsh=MTVwNm9kYTA1MGljbQ=='">
+                    <img src="../assets/youtube.svg" alt="" onclick="window.location.href='https://youtube.com/@yukthaconstructions?si=s6fSNCyg8U8K1U64'">
+                    <!-- https://www.linkedin.com/in/vishey-sampangi-1817a325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app -->
+                </div>
+            </div>
+            <div class="main-footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d121813.3233374813!2d78.34446!3d17.4277923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9127e282d7d5%3A0xdc037aa92d3fc5c9!2sWingherry%20Technologies%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1738054470109!5m2!1sen!2sin" width="600" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
          </div>
     </div>
     <script src="../js/homepage.js"></script>
