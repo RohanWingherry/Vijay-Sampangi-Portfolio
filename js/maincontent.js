@@ -4,32 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarText = document.getElementById('sidebar-text');
     const closeSidebarButton = document.getElementById('close-sidebar');
 
-    // Function to open sidebar with specific content
+    // Function to open the sidebar with specific content
     const openSidebar = (content) => {
-        sidebarText.textContent = content;
-        sidebar.classList.add('active');
+        sidebarText.innerHTML = content; // Populate sidebar with HTML content
+        sidebar.classList.add('active'); // Show the sidebar
     };
 
     // Function to close the sidebar
     const closeSidebar = () => {
-        sidebar.classList.remove('active');
+        sidebar.classList.remove('active'); // Hide the sidebar
     };
 
-    // Attach click events to each triangle
+    // Attach click events to each "View Details" button
     triangles.forEach(triangle => {
         triangle.addEventListener('click', () => {
-            const fullDetails = triangle.getAttribute('data-full-details');
-            openSidebar(fullDetails);
+            const detailsId = triangle.getAttribute('data-details-id'); // Get the ID of the hidden details
+            const detailsContent = document.getElementById(detailsId).innerHTML; // Get the content of the hidden details
+            openSidebar(detailsContent); // Open sidebar with the fetched content
         });
     });
 
-    // Close sidebar on clicking the OK button
+    // Close the sidebar when clicking the "OK" button
     closeSidebarButton.addEventListener('click', closeSidebar);
 
-    // Close sidebar when clicking outside
+    // Close sidebar when clicking outside of it
     document.addEventListener('click', (e) => {
         if (!sidebar.contains(e.target) && !e.target.classList.contains('viewdetails')) {
             closeSidebar();
         }
     });
 });
+
+
+

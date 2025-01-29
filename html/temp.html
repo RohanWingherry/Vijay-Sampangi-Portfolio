@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/maincontent.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
                 <div class="content-headings">
                     <div class="lines"></div>
                     <div class="content-holder-heading">18+ Years Experience</div>
-                    <div class="lines"></div>
+                    <div class="lines line"></div>
                 </div>
                 <div class="experience-box-holder">
                     <div class="experience-box">
@@ -25,14 +27,15 @@
                             <div class="upper-content-bx">
                                 <div class="upper-part">
                                     <div class="upper-icon">
-                                        <img src="../assets/apollohospital.png" alt="">
+                                        <img src="../assets/hospital.svg" alt="">
                                     </div>
                                     <div class="exp-content">
-                                        <div class="exp-head">Apollo Hospitals</div>
+                                        <div class="exp-head">Apollo Hospitals, Hyderabad</div>
                                     </div>
                                 </div>
                                 <div class="exp-content ex-para">
-                                    <div class="exp-para">I Have worked in Apollo Hospitals as Front Office Executive.I Have worked in Apollo Hospitals as Front Office Executive.</div>
+                                    <div class="exp-para subhead">Front Office Executive (2008 - 2010)</div>
+                                    <div class="exp-para">At Apollo Hospitals, Hyderabad, I managed front desk operations, ensuring a welcoming environment and delivering excellent patient support. I played a key role in facilitating smooth coordination between patients, doctors, and hospital staff while handling administrative responsibilities.</div>
                                 </div>
                             </div>
                             <div class="right-dsg">
@@ -41,23 +44,70 @@
                         </div>
                         <!-- Purple Triangle -->
                         <div class="triangle" >
-                            <span class="viewdetails" data-full-details="I Have worked in Apollo Hospitals as Front Office Executive.I Have worked in Apollo Hospitals as Front Office Executive.I Have worked in Apollo Hospitals as Front Office Executive.I Have worked in Apollo Hospitals as Front Office Executive.I Have worked in Apollo Hospitals as Front Office Executive.I Have worked in Apollo Hospitals as Front Office Executive.">View Details</span>
+                            <span class="viewdetails" data-details-id="details-apollo">View Details</span>
                         </div>
+                        <!-- Hidden content for Apollo Hospitals -->
+                        <!-- <div class="hidden-details" id="details-apollo" style="display: none;">
+                            <h3>Apollo Hospitals, Hyderabad</h3>
+                            <h4>Front Office Executive (2008 - 2010)</h4>
+                            <p>At Apollo Hospitals, Hyderabad, I managed front desk operations, ensuring a welcoming environment and delivering excellent patient support. I played a key role in facilitating smooth coordination between patients, doctors, and hospital staff while handling administrative responsibilities.</p>
+                            <ul>
+                                <li><strong>Front Desk Operations:</strong> Managed daily front desk activities, ensuring a professional and welcoming environment for patients and visitors.</li>
+                                <li><strong>Appointment Scheduling:</strong> Coordinated and scheduled appointments to facilitate seamless interaction between patients and doctors.</li>
+                                <li><strong>Patient Support:</strong> Assisted patients with queries, provided guidance, and ensured a smooth and stress-free experience.</li>
+                                <li><strong>Administrative Tasks:</strong> Handled registration, record management, and maintained accurate documentation.</li>
+                                <li><strong>Coordination:</strong> Acted as a liaison between patients, doctors, and hospital staff to ensure efficient communication and service delivery.</li>
+                                <li><strong>Confidentiality and Professionalism:</strong> Maintained patient confidentiality and upheld the hospital's high standards of care and service.</li>
+                            </ul>
+                        </div> -->
+                        <div class="hidden-details" id="details-apollo" style="display: none;">
+                            <div class="sidehide-header">
+                              <h3 class="sidehide-title">Apollo Hospitals, Hyderabad</h3>
+                              <h4 class="sidehide-subtitle">Front Office Executive (2008 - 2010)</h4>
+                            </div>
+                            <div class="sidehidescroll">
+                                <p class="sidehide-description">
+                                    At Apollo Hospitals, Hyderabad, I managed front desk operations, ensuring a welcoming environment and delivering excellent patient support. I played a key role in facilitating smooth coordination between patients, doctors, and hospital staff while handling administrative responsibilities.
+                                  </p>
+                                  <ul class="sidehide-tasks">
+                                    <li>
+                                      <strong>Front Desk Operations:</strong> Managed daily front desk activities, ensuring a professional and welcoming environment for patients and visitors.
+                                    </li>
+                                    <li>
+                                      <strong>Appointment Scheduling:</strong> Coordinated and scheduled appointments to facilitate seamless interaction between patients and doctors.
+                                    </li>
+                                    <li>
+                                      <strong>Patient Support:</strong> Assisted patients with queries, provided guidance, and ensured a smooth and stress-free experience.
+                                    </li>
+                                    <li>
+                                      <strong>Administrative Tasks:</strong> Handled registration, record management, and maintained accurate documentation.
+                                    </li>
+                                    <li>
+                                      <strong>Coordination:</strong> Acted as a liaison between patients, doctors, and hospital staff to ensure efficient communication and service delivery.
+                                    </li>
+                                    <li>
+                                      <strong>Confidentiality and Professionalism:</strong> Maintained patient confidentiality and upheld the hospital's high standards of care and service.
+                                    </li>
+                                  </ul>
+                            </div>
+                        </div>
+                          
                     </div>
- 
+                    
                     <div class="experience-box">
                         <div class="upper">
                             <div class="upper-content-bx">
                                 <div class="upper-part">
                                     <div class="upper-icon">
-                                        <img src="../assets/wingherrycomp.png" alt="">
+                                        <img src="../assets/wingherry.svg" alt="">
                                     </div>
                                     <div class="exp-content">
                                         <div class="exp-head">Testegg Software Pvt Ltd</div>
                                     </div>
                                 </div>
                                 <div class="exp-content">
-                                    <div class="exp-para">I Have worked as a Sales Manager in Testegg Software Pvt Ltd .The goal of this project is to help and connect educators with students in many areas including the support of classroom-based learning, knowledge of  
+                                    <div class="exp-para subhead">Sales Manager (April 2010 - February 2014)</div>
+                                    <div class="exp-para">As Sales Manager at Testegg Software Pvt Ltd, I spearheaded sales initiatives aimed at bridging the gap between educators and students through innovative software solutions. 
                                     </div>
                                 </div>
                             </div>
@@ -68,8 +118,22 @@
                             
                         </div>
                         <!-- Purple Triangle -->
-                        <div class="triangle" data-content="Testegg Software Pvt Ltd">
-                            <span class="viewdetails">View Details</span>
+                        <div class="triangle">
+                            <span class="viewdetails" data-details-id="details-testegg">View Details</span>
+                        </div>
+                        <!-- Hidden content for Apollo Hospitals -->
+                        <div class="hidden-details" id="details-testegg" style="display: none;">
+                            <h3> Hospitals, Hyderabad</h3>
+                            <h4>Front Office Executive (2008 - 2010)</h4>
+                            <p>At Apollo Hospitals, Hyderabad, I managed front desk operations, ensuring a welcoming environment and delivering excellent patient support. I played a key role in facilitating smooth coordination between patients, doctors, and hospital staff while handling administrative responsibilities.</p>
+                            <ul>
+                                <li><strong>Front Desk Operations:</strong> Managed daily front desk activities, ensuring a professional and welcoming environment for patients and visitors.</li>
+                                <li><strong>Appointment Scheduling:</strong> Coordinated and scheduled appointments to facilitate seamless interaction between patients and doctors.</li>
+                                <li><strong>Patient Support:</strong> Assisted patients with queries, provided guidance, and ensured a smooth and stress-free experience.</li>
+                                <li><strong>Administrative Tasks:</strong> Handled registration, record management, and maintained accurate documentation.</li>
+                                <li><strong>Coordination:</strong> Acted as a liaison between patients, doctors, and hospital staff to ensure efficient communication and service delivery.</li>
+                                <li><strong>Confidentiality and Professionalism:</strong> Maintained patient confidentiality and upheld the hospital's high standards of care and service.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="experience-box">
@@ -77,13 +141,14 @@
                             <div class="upper-content-bx">
                                 <div class="upper-part">
                                     <div class="upper-icon">
-                                        <img src="../assets/apollohospital.png" alt="">
+                                        <img src="../assets/hospital.svg" alt="">
                                     </div>
                                     <div class="exp-content">
-                                        <div class="exp-head">Basavatarakam Indo Hospitals</div>
+                                        <div class="exp-head">Basavatarakam Indo Hospital</div>
                                     </div>
                                 </div>
                                 <div class="exp-content">
+                                    <div class="exp-para subhead">Billing Executive & Public Relation Officer (March 2014 - November 2015)</div>
                                     <div class="exp-para">I Have worked in Basavatarakam Indo American Cancer Hospital & Research Institute as a Billing Executive in Corporate Relations and Public Relation Officer.</div>
                                 </div>
                             </div>
@@ -103,14 +168,15 @@
                             <div class="upper-content-bx">
                                 <div class="upper-part">
                                     <div class="upper-icon">
-                                        <img src="../assets/wingherrycomp.png" alt="">
+                                        <img src="../assets/wingherry.svg" alt="">
                                     </div>
                                     <div class="exp-content">
                                         <div class="exp-head">Wingherry Technologies</div>
                                     </div>
                                 </div>
                                 <div class="exp-content">
-                                    <div class="exp-para">Co-Founder and Co-Owner
+                                    <div class="exp-para subhead">Co-Founder and Co-Owner</div>
+                                    <div class="exp-para">
                                         30+ software projects for Hospitals, 250+ Clients in all over the globe</div>
                                 </div>
                             </div>
@@ -130,14 +196,15 @@
                             <div class="upper-content-bx">
                                 <div class="upper-part">
                                     <div class="upper-icon">
-                                        <img src="../assets/yukthaconstruction.png" alt="">
+                                        <img src="../assets/yukthaconstruction.svg" alt="">
                                     </div>
                                     <div class="exp-content">
                                         <div class="exp-head">Yuktha Construction &Yuktha Earth Movers Machinery Works</div>
                                     </div>
                                 </div>
                                 <div class="exp-content">
-                                    <div class="exp-para">Co-Founder and Co-Owner
+                                    <div class="exp-para subhead">Co-Founder and Co-Owner</div>
+                                    <div class="exp-para">
                                         Handled over 150+ projects in all fields of civil constructions</div>
                                 </div>
                             </div>
@@ -152,23 +219,304 @@
                             <span class="viewdetails">View Details</span>
                         </div>
                     </div>
+                    <div class="roundedimg roundleft">
+                        <img src="../assets/Group 22366.svg" alt="">
+                    </div>
+                    <div class="roundedimg roundright">
+                        <img src="../assets/Group 22367.svg" alt="">
+                    </div>
                 </div>
+                
+              
+                
                 <!-- Sidebar -->
                 <div class="sidebar">
                     <div class="sidebar-content">
-                        <p id="sidebar-text"></p>
+                        <div id="sidebar-text"></div>
                         <button id="close-sidebar">OK</button>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            <div class="content-holder-box">
+                <div class="content-headings">
+                    <div class="lines"></div>
+                    <div class="content-holder-heading">Qualifications</div>
+                    <div class="lines line"></div>
+                </div>
+                <div class="experience-box-holder">
+                    <div class="experience-box">
+                        <div class="upper">
+                            <div class="upper-content-bx">
+                                <div class="upper-part">
+                                    <div class="upper-icon">
+                                        <img src="../assets/MIMB.svg" alt="">
+                                    </div>
+                                    <div class="exp-content">
+                                        <div class="exp-head">MIBM GLOBAL (Matrix Institute of Business Management) <span class="lightheading">MBA</span></div>
+                                    </div>
+                                </div>
+                                <div class="exp-content ex-para">
+                                    <div class="exp-para">University : MIBM Global is approved & accredited by United Kingdom Accreditation Service. The United Kingdom Accreditation Service is the sole national accreditation body recognized by the British government to assess the competence of organizations that provide certification, testing, inspection and calibration services
+                                        with overall work experience of 12 yrs
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="content-holder-box">
-                <div class="content-holder-heading"></div>
+                <div class="content-headings">
+                    <div class="lines"></div>
+                    <div class="content-holder-heading">Skills</div>
+                    <div class="lines line"></div>
+                </div>
+                <div class="skill-box-holder">
+                    <div class="skills-box">
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <!-- Default SVG is purple -->
+                                <img src="../assets/quality.svg" alt="Quality" class="default-icon">
+                                <!-- White SVG is hidden initially -->
+                                <img src="../assets/qualitywhite.svg" alt="Quality" class="hover-icon">
+                            </div>
+                            <div class="skill-head">Quality Focus.</div>
+                            <div class="skill-para">We provide qualitative output to our 
+                                valuvable customers based upon their
+                                requirement and we have an 1600+ 
+                                Clients across <b>INDIA</b></div>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <!-- Default SVG is purple -->
+                                <img src="../assets/multitask.svg" alt="Multi-tasking" class="default-icon">
+                                <!-- White SVG is hidden initially -->
+                                <img src="../assets/multitaskwhite.svg" alt="Multi-tasking" class="hover-icon">
+                            </div>
+                            <div class="skill-head">Multi-tasking.</div>
+                            <div class="skill-para">We provide qualitative output to our 
+                                valuvable customers based upon their
+                                requirement and we have an 1600+ 
+                                Clients across <b>INDIA</b></div>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skill">
+                            <div class="skill-icon">
+                                <!-- Default SVG is purple -->
+                                <img src="../assets/sales.svg" alt="Sales" class="default-icon">
+                                <!-- White SVG is hidden initially -->
+                                <img src="../assets/saleswhite.svg" alt="Sales" class="hover-icon">
+                            </div>
+                            <div class="skill-head">Sales & 
+                                Marketing Management.</div>
+                            <div class="skill-para">We provide qualitative output to our 
+                                valuvable customers based upon their
+                                requirement and we have an 1600+ 
+                                Clients across <b>INDIA</b></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="content-holder-box">
-                <div class="content-holder-heading"></div>
+                <div class="content-headings">
+                    <div class="lines"></div>
+                    <div class="content-holder-heading">Awards & Certifications</div>
+                    <div class="lines line"></div>
+                </div>
+                <section id="tranding">
+                    <div class="container-for-slides">
+                      <div class="swiper tranding-slider">
+                        <div class="swiper-wrapper">
+                          <!-- Slide-start -->
+                          <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="../assets/wingemp.jpg" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">Apollo Hospital, Jubilee Hills
+                                </h2>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Slide-end -->
+                          <!-- Slide-start -->
+                          <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="../assets/apollocert.jpg" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">
+                                </h2>
+                                <h3 class="food-rating">
+                                  <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                  </div>
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Slide-end -->
+                          <!-- Slide-start -->
+                          <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="images/tranding-food-3.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">
+                                </h2>
+                                <h3 class="food-rating">
+                                  <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                  </div>
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Slide-end -->
+                          <!-- Slide-start -->
+                          <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="images/tranding-food-4.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">
+                                </h2>
+                                <h3 class="food-rating">
+                                  <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                  </div>
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Slide-end -->
+                          <!-- Slide-start -->
+                          <!-- <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="images/tranding-food-5.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">
+                                  Pane Cake
+                                </h2>
+                                <h3 class="food-rating">
+                                  <span>4.5</span>
+                                  <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                  </div>
+                                </h3>
+                              </div>
+                            </div>
+                          </div> -->
+                          <!-- Slide-end -->
+                          <!-- Slide-start -->
+                          <!-- <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="images/tranding-food-6.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">
+                                  Vanilla cake
+                                </h2>
+                                <h3 class="food-rating">
+                                  <span>4.5</span>
+                                  <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                  </div>
+                                </h3>
+                              </div>
+                            </div>
+                          </div> -->
+                          <!-- Slide-end -->
+                          <!-- Slide-start -->
+                          <!-- <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                              <img src="images/tranding-food-7.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                              
+                              <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name">
+                                  Straw Cake
+                                </h2>
+                                <h3 class="food-rating">
+                                  <span>4.5</span>
+                                  <div class="rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                  </div>
+                                </h3>
+                              </div>
+                            </div>
+                          </div> -->
+                          <!-- Slide-end -->
+                        </div>
+              
+                        <!-- <div class="tranding-slider-control">
+                          <div class="swiper-button-prev slider-arrow">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                          </div>
+                          <div class="swiper-button-next slider-arrow">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div> -->
+              
+                      </div>
+                    </div>
+                  </section>
             </div>
+
         </div>
     </div>
+    
+  
+      <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+      <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="../js/script.js"></script>
     <script src="../js/maincontent.js"></script>
 </body>
 </html>
