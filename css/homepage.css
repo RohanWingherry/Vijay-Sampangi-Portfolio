@@ -37,13 +37,20 @@
 }
 .main-home-page-content .homepage-image-section #yuktha-image-section,
 .main-home-page-content .homepage-image-section #wingherry-image-section{
-    background-color: white;
+    background-color: rgb(194, 194, 194);
     width: 55px;
     height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+.main-home-page-content .homepage-image-section #yuktha-image-section.scaled,
+.main-home-page-content .homepage-image-section #wingherry-image-section.scaled {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.3);
+    cursor: pointer; 
 }
 .main-home-page-content .homepage-image-section #yuktha-image-section>img{
     height: 40px;
@@ -57,17 +64,62 @@
 /* Introduction and Profile section */
 .main-portfolio .main-intro-profile-section{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
 /* Introducion Section */
 .main-intro-profile-section .main-into-section{
-    max-width: 630px;
+    max-width: 700px;
     width: 100%;
     margin-left: 20px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    
 }
+.main-intro-profile-section .dot-section {
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    height: 180px;
+}
+
+.dot {
+    opacity: 0;
+    transform: translateY(-50px); /* Start position above the screen */
+    animation: fall 1s ease forwards;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.dot:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.dot:nth-child(5) {
+    animation-delay: 2s;
+}
+
+@keyframes fall {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Final position after falling */
+    }
+}
+
 .main-into-section .main-into{
     position: relative;
     top: 100px;
@@ -77,6 +129,7 @@
     flex-direction: column;
     align-items: flex-start;
     font-family: Prompt;
+    
 }
 .main-into-section .main-into #hello{
     font-size: 32px;
@@ -88,17 +141,144 @@
     font-weight: 600;
     line-height: 40px;
 }
-.main-into-section .main-into #chairman{
-    font-size: 32px;
+#chairman, #chairman-desc {
+    opacity: 1;
+    display: inline;
+}
+
+/* Animation for text zooming from left to right */
+@keyframes zoomInFromLeft {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* The zoom animation applied to each letter */
+.zoom-animation span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: zoomInFromLeft 0.8s ease forwards;
+}
+
+/* Delay for the animation of each span */
+.zoom-animation span:nth-child(1) {
+    animation-delay: 0s;
+}
+.zoom-animation span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.zoom-animation span:nth-child(3) {
+    animation-delay: 0.125s;
+}
+.zoom-animation span:nth-child(4) {
+    animation-delay: 0.15s;
+}
+.zoom-animation span:nth-child(5) {
+    animation-delay: 0.175s;
+}
+.zoom-animation span:nth-child(6) {
+    animation-delay: 0.2s;
+}
+.zoom-animation span:nth-child(7) {
+    animation-delay: 0.225s;
+}
+.zoom-animation span:nth-child(8) {
+    animation-delay: 0.25s;
+}
+.zoom-animation span:nth-child(9) {
+    animation-delay: 0.275s;
+}
+.zoom-animation span:nth-child(10) {
+    animation-delay: 0.3s;
+}
+.zoom-animation span:nth-child(11) {
+    animation-delay: 0.325s;
+}
+.zoom-animation span:nth-child(12) {
+    animation-delay: 0.35s;
+}
+.zoom-animation span:nth-child(13) {
+    animation-delay: 0.375s;
+}
+.zoom-animation span:nth-child(14) {
+    animation-delay: 0.4s;
+}
+.zoom-animation span:nth-child(15) {
+    animation-delay: 0.425s;
+}
+.zoom-animation span:nth-child(16) {
+    animation-delay: 0.45s;
+}
+.zoom-animation span:nth-child(17) {
+    animation-delay: 0.475s;
+}
+.zoom-animation span:nth-child(18) {
+    animation-delay: 0.5s;
+}
+.zoom-animation span:nth-child(19) {
+    animation-delay: 0.525s;
+}
+.zoom-animation span:nth-child(20) {
+    animation-delay: 0.55s;
+}
+.zoom-animation span:nth-child(21) {
+    animation-delay: 0.575s;
+}
+.zoom-animation span:nth-child(22) {
+    animation-delay: 0.6s;
+}
+.zoom-animation span:nth-child(23) {
+    animation-delay: 0.625s;
+}
+.zoom-animation span:nth-child(24) {
+    animation-delay: 0.65s;
+}
+.zoom-animation span:nth-child(25) {
+    animation-delay: 0.675s;
+}
+.zoom-animation span:nth-child(26) {
+    animation-delay: 0.7s;
+}
+.zoom-animation span:nth-child(27) {
+    animation-delay: 0.725s;
+}
+.zoom-animation span:nth-child(28) {
+    animation-delay: 0.75s;
+}
+.zoom-animation span:nth-child(29) {
+    animation-delay: 0.775s;
+}
+.zoom-animation span:nth-child(30) {
+    animation-delay: 0.8s;
+}
+.zoom-animation span:nth-child(31) {
+    animation-delay: 0.825s;
+}
+
+.main-into-section .main-into #chairman {
+    font-size: 32px; 
     font-weight: 350;
     line-height: 48px;
 }
-.main-into-section .main-into #chairman-desc{
+
+.main-into-section .main-into #chairman-desc {
     margin-top: 10px;
     font-size: 18px;
     line-height: 23px;
     font-weight: 300;
+    height: 160px;
 }
+
 .main-into-section .main-into #getintouchbtn{
     background-color: #FEB12F;
     font-size: 18px;
@@ -106,13 +286,19 @@
     margin-top: 15px;
     padding: 6px 10px;
     border-radius: 20px;
+    cursor: pointer;
 }
 .main-into-section .curl-arrow{
     position: relative;
     top: 110px;
     left: 50px;
+    height: 60px;
+    width: 60px;
 }
-
+.main-into-section .curl-arrow>img{
+    height: 100%;
+    transform: rotate(120deg);
+}
 /* Profile Section */
 
 .main-intro-profile-section .main-profile-section{
@@ -137,22 +323,166 @@
     position: relative;
     z-index: 99;
     bottom: 10px;
+    transition: transform 0.2s ease-in-out;
 }
-.main-profile-section .profile-dot-section{
+.main-profile-section .profile-sec #profile-pic:hover{
+    transform: scale(1.05);
+}
+.main-profile-section .profile-dot-section {
     position: relative;
     bottom: 50px;
+    margin-right: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px; 
+    z-index: 999;
 }
 
-@media (min-width:1024px) and (max-width:1205px) {
+.dot-profile {
+    opacity: 0; 
+    transform: translateY(50px);
+    animation: rise 1s ease forwards;
+}
+
+.dot-profile:nth-child(1) {
+    animation-delay: 2s; 
+}
+
+.dot-profile:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.dot-profile:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.dot-profile:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.dot-profile:nth-child(5) {
+    animation-delay: 0s; 
+}
+
+@keyframes rise {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Modal for Get in Touch */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 999;
+    font-family: Poppins;
+    overflow-y: auto;
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 5px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #contactForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+#contactForm .textarea{
+    width: 100%;
+}
+  #contactForm div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+  }
+  #contactForm label {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  #contactForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+  }
+  #contactForm .names{
+    width: 250px;
+  }
+  #contactForm textarea{
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #feb22f54;
+    outline: none;
+    resize: none;
+  }
+  
+#contactForm  #submitBtn {
+    background-color: #FEB12F;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+@media (min-width:1024px) and (max-width:1298px) {
     .main-intro-profile-section .main-into-section{
-        max-width: 420px;
+        max-width: 460px;
         width: 100%;
         margin-left: 30px;
     }
     .main-into-section .main-into{
         left: 30px;
         top: 0px;
+        margin-top: 80px;
         padding-bottom: 20px;
+    }
+    .main-into-section .main-into #chairman-desc{
+        height: 260px;
     }
     .main-into-section .curl-arrow{
         top: 0px;
@@ -162,13 +492,24 @@
         right: 10px;
         bottom: 50px;
     }
+   
 }
-@media (max-width:1024px) {
+@media (max-width:1279px) and (min-width:1110px) {
+    .main-intro-profile-section .main-into-section{
+        max-width: 565px;
+        width: 100%;
+        margin-left: 30px;
+    }
+    .main-into-section .main-into #chairman-desc {
+        height: 220px;
+    }
+}
+@media (max-width:1023px) {
     .main-home-page-content .homepage-image-section{
         padding: 20px 30px;
     }
     .main-portfolio .main-intro-profile-section{
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
     }
     .main-intro-profile-section .main-into-section{
@@ -176,10 +517,6 @@
         width: 100%;
         margin-left: 0px;
         padding: 20px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: end;
-        justify-content: flex-start;
     }
     .main-into-section .main-into{
         position: relative;
@@ -187,50 +524,69 @@
         right: 50px;
         left: 0px;
         padding: 20px;
+        padding-bottom: 20px;
+    }
+    .main-into-section .main-into #chairman-desc {
+        height: 150px;
     }
     .main-into-section .curl-arrow{
         position:absolute;
         top: 420px;
-        left: 300px;
+        left: 300px; 
+    }
+    .main-into-section .curl-arrow>img{
+        transform: rotate(220deg);
     }
     .main-intro-profile-section .main-profile-section{
         max-width: 100%;
         width: 100%;
-        margin-right: 0px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: start;
-        justify-content: flex-start;
         height: 300px;
     }
     .main-profile-section .profile-sec{
         width: 90%;
-        right: 80px;
+        right: 0px;
         height: 100%;
     }
     .main-profile-section .profile-sec #profile-bg{
-        right: 20px;
+        left: 120px;
         bottom: 0px;
         height: 300px;
     }
     .main-profile-section .profile-sec #profile-pic{
         position: absolute;
-        right: 50px;
+        left: 150px;
         top: 0px;
         bottom: 0px;
         height: 300px;
     }
     .main-profile-section .profile-dot-section{
         bottom: 0px;
-        right: 45px;
+        right: 15px;
+        margin-right: 15px;
+    }
+    .main-into-section .curl-arrow{
+        top: 450px;
+        left: 290px;
     }
     
 }
-@media (max-width:760px) {
+@media (max-width:765px) {
     .main-into-section .curl-arrow{
         position:absolute;
-        top: 420px;
+        top: 500px;
         left: 290px;
+    }
+    .main-into-section .main-into #hello{
+        font-size: 25px;
+    }
+    .main-into-section .main-into #vijay{
+        font-size: 25px;
+    }
+    .main-into-section .main-into #chairman{
+        font-size: 25px;
+    }
+    .main-into-section .main-into #chairman-desc {
+        height: 180px;
     }
     .main-profile-section .profile-sec{
         max-width: 100%;
@@ -238,17 +594,106 @@
         right: 5px;
     }
     .main-profile-section .profile-sec #profile-bg{
-        width: 95%;
-        right: 0px;
+        left: 100px;
     }
     .main-profile-section .profile-sec #profile-pic{
-        right: 10px;
+        left: 115px;
     }
     .main-profile-section .profile-dot-section{
         bottom: 0px;
         right: 0px;
+        margin-right: 15px;
+    }
+    
+}
+@media (max-width:667px) {
+    .main-into-section .main-into #chairman{
+        max-width: 500px;
+        width: 100%;
+    }
+    .main-into-section .curl-arrow{
+        top: 550px;
+        left: 200px; 
+    }
+}
+@media (max-width:620px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 225px;
+    }
+    .main-into-section .curl-arrow{
+        top: 600px;
+        left: 200px; 
+    }
+}
+@media (max-width:505px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 270px;
+    }
+    .main-into-section .curl-arrow{
+        top: 600px;
+        left: 200px; 
+    }
+}
+@media (max-width:451px) {
+    .main-into-section .main-into #chairman{
+        max-width: 300px;
+        width: 100%;
+    }
+    .main-into-section .main-into #chairman-desc {
+        height: 330px;
+    }
+    .main-into-section .curl-arrow{
+        top: 700px;
+        left: 200px; 
+    }
+    .main-profile-section .profile-sec #profile-bg{
         left: 20px;
-        z-index: 8;
+    }
+    .main-profile-section .profile-sec #profile-pic{
+        left: 30px;
+    }
+}
+@media (max-width:391px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 360px;
+    }
+    .main-profile-section .profile-sec #profile-bg{
+        width: 100%;
+    }
+}
+@media (max-width:366px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 400px;
+    }
+}
+@media (max-width:358px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 410px;
+    }
+}
+@media (max-width:336px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 450px;
+    }
+}
+@media (max-width:332px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 450px;
+    }
+}
+@media (max-width:315px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 500px;
+    }
+    .main-profile-section .profile-sec #profile-pic{
+        width: 100%;
+    }
+
+    
+}
+@media (max-width:296px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 100%;
     }
 }
   
