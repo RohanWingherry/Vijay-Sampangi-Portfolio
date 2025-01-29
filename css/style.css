@@ -112,7 +112,8 @@
   left: 50%;
   transform: translateX(-50%) rotate(-6.31deg);
   width: 100%;
-  
+  background-color: #ffffff; /* Change this to your desired solid color */
+    opacity: 1; /* Ensure full opacity */
 }
 
 
@@ -122,13 +123,28 @@
   bottom: 0px;
   left: 0x;
   color: black;
-  background-color: rgb(255, 255, 255) !important; 
-  max-width: 300px;
+  background-color: #ffffff; /* Change this to your desired solid color */
+  opacity: 1; /* Ensure full opacity */  max-width: 300px;
   width: 100%;
   height: 150px;
   border: 10px solid rgb(181, 181, 181);
   border-radius: 2px;
 
+}
+.textbox{
+  position: relative;
+  bottom: 0px;
+  left: 0x;
+  bottom: 50px;
+  left: 0%;
+  transform: translateX(-50%) rotate(-6.31deg);
+  color: black;
+  background-color: #ffffff; /* Change this to your desired solid color */
+  opacity: 1; /* Ensure full opacity */  max-width: 300px;
+  width: 100%;
+  height: 150px;
+  border: 10px solid rgb(181, 181, 181);
+  border-radius: 2px;
 }
 
 

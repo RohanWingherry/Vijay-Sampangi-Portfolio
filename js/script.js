@@ -5,7 +5,7 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     loop: true,
     slidesPerView: 'auto',
     autoplay: {
-      delay: 1000, // Auto-slide every 1 second
+      delay: 10000, // Auto-slide every 1 second
       disableOnInteraction: false, // Keep autoplay even if user interacts
     },
     coverflowEffect: {
