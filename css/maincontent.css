@@ -94,7 +94,7 @@
 }
 
 .upper-icon {
-  min-width: 50px;
+  /* min-width: 50px; */
   max-width: 60px;
   width: 100%;
 }
