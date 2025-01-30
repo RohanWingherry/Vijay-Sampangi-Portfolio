@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centered Image Carousel</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        body {
+
+        .caro {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #f5f5f5;
+            background: #ffffff;
         }
+
         .carousel-container {
             position: relative;
             width: 100%;
-            height: 550px; /* Adjusted container height to match image height */
+            height: 550px;
+            /* Adjusted container height to match image height */
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 100px; /* Increased space between images */
+            gap: 100px;
+            /* Increased space between images */
         }
-        .image-fixed{
-          position: absolute;
-          margin-bottom: 210px;
-          margin-right: 100px;
+
+        .image-fixed {
+            position: absolute;
+            margin-bottom: 100px;
+            margin-right: 110px;
         }
-        .image-fixed>img{
-          height: 300px;
+
+        .image-fixed>img {
+            max-width: 400px;
+            width: 100%;
         }
+
         .carousel {
             display: flex;
             justify-content: center;
@@ -42,52 +55,165 @@
             position: relative;
             width: 100%;
         }
+
         .carousel-item {
             position: absolute;
             transition: transform 0.5s ease-in-out, opacity 0s ease-in-out;
         }
-        .carousel-item img {
-            width: 210px;
-            height: 270px;
+
+        .carousel-item {
+            max-width: 260px;
+            width: 100%;
+            height: 250px;
+            /* padding: 5px; */
             border-radius: 5px;
-            object-fit: contain;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        .carousel-item img {
+            max-width: 260px;
+            width: 100%;
+            max-height: 250px;
+            height: 100%;
+            border-radius: 5px;
+            object-fit:cover;
             background-color: white;
         }
+
         .left {
-            transform: translateX(-150%) scale(0.8); /* Adjusted to move the image more to the left */
+            transform: translateX(-150%) scale(0.8);
+            /* Adjusted to move the image more to the left */
             opacity: 0.5;
         }
+
         .center {
             transform: translateX(0) scale(1.5);
-            opacity: 1; /* Fixed opacity value for better clarity */
+            opacity: 1;
+            /* Fixed opacity value for better clarity */
         }
+
         .right {
-            transform: translateX(150%) scale(0.8); /* Adjusted to move the image more to the right */
+            transform: translateX(150%) scale(0.8);
+            /* Adjusted to move the image more to the right */
             opacity: 0.5;
         }
-        .behind{
-          transform: translateX(0) scale(1.5);
-            opacity: 0; 
+
+        .behind {
+            transform: translateX(0) scale(1.5);
+            opacity: 0;
+        }
+
+        .slanttextbox {
+            position: absolute;
+            background-color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            border-radius: 2px;
+            left: 50%;
+            bottom: -45px;
+            max-width: 200px;
+            width: 100%;
+            height: 90px;
+            transform: translateX(-50%) rotate(-6.31deg);
+            padding: 10px;
+        }
+
+        .slanttextbox {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .slanthead {
+            font-family: prompt;
+            font-size: 12px;
+            font-weight: 700;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .slantpoints {
+            font-family: prompt;
+            font-size: 10px;
+            font-weight: 400;
+            color: #494949;
+            padding-left: 15px;
+            line-height: 15px;
+        }
+
+        @media (max-width:500px) {
+            .carousel-item {
+                max-width: 220px;
+                width: 100%;
+                height: 220px;
+            }
+
+            .image-fixed {
+                position: absolute;
+                margin-bottom: 110px;
+                margin-right: 110px;
+            }
+
+            .image-fixed>img {
+                width: 300px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="carousel-container">
-      <div class="image-fixed">
-        <img src="../assets/eclipse.svg" alt="">
-      </div>
-        <div class="carousel">
-            <div class="carousel-item center">
-                <img src="../assets/apollocert.jpg" alt="Image 1">
+    <div class="caro">
+        <div class="carousel-container">
+            <div class="image-fixed">
+                <img src="../assets/eclipse.svg" alt="">
             </div>
-            <div class="carousel-item right">
-                <img src="../assets/wingemp.jpg" alt="Image 2">
-            </div>
-            <div class="carousel-item left">
-                <img src="../assets/google.png" alt="Image 3">
-            </div>
-            <div class="carousel-item behind">
-                <img src="../assets/wingemp.jpg" alt="Image 4">
+            <div class="carousel">
+                <div class="carousel-item center">
+                    <img src="../assets/apollocert.jpg" alt="Image 1">
+                    <div class="slanttextbox">
+                        <div class="slanttext">
+                            <div class="slanthead">Apollo Hospital, Jubilee Hills</div>
+                            <ul class="slantpoints">
+                                <li>First JCI Accreditation </li>
+                                <li>Champion Award </li>
+                                <li>Best Employee Award (2008) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item right">
+                    <img src="../assets/wingemp.jpg" alt="Image 2">
+                    <div class="slanttextbox">
+                        <div class="slanttext">
+                            <div class="slanthead">Wingherry Technology Private Limited</div>
+                            <ul class="slantpoints">
+                                <li>Best Enterprises Award (2020) for Innovative Creation,  </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item left">
+                    <img src="../assets/yuktha-logo.svg" alt="Image 3">
+                    <div class="slanttextbox">
+                        <div class="slanttext">
+                            <div class="slanthead">Yukthaa Constructions</div>
+                            <ul class="slantpoints">
+                                <li>Best Middle-Class Affordable Construction Company Award (2023) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item behind">
+                    <img src="../assets/bestemp.jpg" alt="Image 4">
+                    <div class="slanttextbox">
+                        <div class="slanttext">
+                            <div class="slanthead">Biachri</div>
+                            <ul class="slantpoints">
+                                <li>Best Employee Award (2014) for outstanding performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,13 +226,13 @@
         // Function to update the carousel class positions
         function updateClasses() {
             slides.forEach((slide, i) => {
-                slide.classList.remove('left', 'center', 'right','behind');
+                slide.classList.remove('left', 'center', 'right', 'behind');
             });
             slides[index].classList.add('center');
             slides[(index + 1) % totalSlides].classList.add('right');
             slides[(index + 2) % totalSlides].classList.add('behind');
             slides[(index + 3) % totalSlides].classList.add('left');
-            
+
         }
 
         // Function to show the next slide
@@ -120,4 +246,5 @@
         updateClasses();
     </script>
 </body>
+
 </html>
