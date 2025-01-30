@@ -159,23 +159,23 @@
 }
 
 .dot:nth-child(1) {
-    animation-delay: 0s;
+    animation-delay: 2s;
 }
 
 .dot:nth-child(2) {
-    animation-delay: 0.5s;
+    animation-delay: 2.5s;
 }
 
 .dot:nth-child(3) {
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 .dot:nth-child(4) {
-    animation-delay: 1.5s;
+    animation-delay: 3.5s;
 }
 
 .dot:nth-child(5) {
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 @keyframes fall {
@@ -411,23 +411,23 @@
 }
 
 .dot-profile:nth-child(1) {
-    animation-delay: 2s; 
+    animation-delay: 4s; 
 }
 
 .dot-profile:nth-child(2) {
-    animation-delay: 1.5s;
+    animation-delay: 3.5s;
 }
 
 .dot-profile:nth-child(3) {
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 .dot-profile:nth-child(4) {
-    animation-delay: 0.5s;
+    animation-delay: 2.5s;
 }
 
 .dot-profile:nth-child(5) {
-    animation-delay: 0s; 
+    animation-delay: 2s; 
 }
 
 @keyframes rise {
