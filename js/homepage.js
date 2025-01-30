@@ -152,7 +152,7 @@ window.addEventListener("load", () => {
     loader.addEventListener("transitionend", () => {
       document.body.removeChild(loader);
     });
-  }, 3500); // 5000ms = 5 seconds
+  }, 2000); // 5000ms = 5 seconds
 });
 
 
