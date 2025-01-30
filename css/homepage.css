@@ -355,7 +355,7 @@
 }
 .main-into-section .curl-arrow{
     position: relative;
-    top: 110px;
+    top: 150px;
     left: 50px;
     height: 60px;
     width: 60px;
@@ -387,8 +387,8 @@
 .main-profile-section .profile-sec #profile-pic{
     position: relative;
     z-index: 99;
-    bottom: 10px;
     transition: transform 0.2s ease-in-out;
+    height: 450px;
 }
 .main-profile-section .profile-sec #profile-pic:hover{
     transform: scale(1.05);
