@@ -1,250 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Image Carousel</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+    <title>Responsive Slider</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        .caro {
+        .media-wrapper {
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: #ffffff;
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 550px;
-            /* Adjusted container height to match image height */
-            overflow: hidden;
-            display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 100px;
-            /* Increased space between images */
+            min-height: 100vh;
+            background: #f1f4fd;
+            flex-direction: column;
         }
 
-        .image-fixed {
-            position: absolute;
-            margin-bottom: 100px;
-            margin-right: 110px;
-        }
-
-        .image-fixed>img {
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .carousel {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-        }
-
-        .carousel-item {
-            position: absolute;
-            transition: transform 0.5s ease-in-out, opacity 0s ease-in-out;
-        }
-
-        .carousel-item {
-            max-width: 260px;
-            width: 100%;
-            height: 250px;
-            /* padding: 5px; */
-            border-radius: 5px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        }
-
-        .carousel-item img {
-            max-width: 260px;
-            width: 100%;
-            max-height: 250px;
-            height: 100%;
-            border-radius: 5px;
-            object-fit:cover;
-            background-color: white;
-        }
-
-        .left {
-            transform: translateX(-150%) scale(0.8);
-            /* Adjusted to move the image more to the left */
-            opacity: 0.5;
-        }
-
-        .center {
-            transform: translateX(0) scale(1.5);
-            opacity: 1;
-            /* Fixed opacity value for better clarity */
-        }
-
-        .right {
-            transform: translateX(150%) scale(0.8);
-            /* Adjusted to move the image more to the right */
-            opacity: 0.5;
-        }
-
-        .behind {
-            transform: translateX(0) scale(1.5);
-            opacity: 0;
-        }
-
-        .slanttextbox {
-            position: absolute;
-            background-color: white;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-            border-radius: 2px;
-            left: 50%;
-            bottom: -45px;
-            max-width: 200px;
-            width: 100%;
-            height: 90px;
-            transform: translateX(-50%) rotate(-6.31deg);
-            padding: 10px;
-        }
-
-        .slanttextbox {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .slanthead {
-            font-family: prompt;
-            font-size: 12px;
-            font-weight: 700;
-            padding-top: 5px;
-            padding-bottom: 5px;
+        .media-container {
+            max-width: 1200px;
+            width: 95%;
             text-align: center;
         }
 
-        .slantpoints {
-            font-family: prompt;
-            font-size: 10px;
-            font-weight: 400;
-            color: #494949;
-            padding-left: 15px;
-            line-height: 15px;
+        .media-slider-wrapper {
+            position: relative;
+            margin-bottom: 20px;
         }
 
-        @media (max-width:500px) {
-            .carousel-item {
-                max-width: 220px;
-                width: 100%;
-                height: 220px;
+        .media-slider-wrapper .media-image-list {
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            gap: 18px;
+            font-size: 0;
+            list-style: none;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .media-slider-wrapper .media-image-list::-webkit-scrollbar {
+            display: none;
+        }
+
+        .media-slider-wrapper .media-image-list .media-image-item {
+            width: 560px;
+            height: 315px;
+            object-fit: cover;
+        }
+
+        .media-slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px; /* Added space above buttons */
+        }
+
+        .media-slider-controls .media-slide-button {
+            outline: none;
+            border: none;
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2.2rem;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .media-slider-controls .media-slide-button:hover {
+            background: #404040;
+        }
+
+        .media-container .media-slider-scrollbar {
+            height: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .media-slider-scrollbar .media-scrollbar-track {
+            background: #ccc;
+            width: 100%;
+            height: 2px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .media-slider-scrollbar:hover .media-scrollbar-track {
+            height: 4px;
+        }
+
+        .media-slider-scrollbar .media-scrollbar-thumb {
+            position: absolute;
+            background: #000;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            cursor: grab;
+            border-radius: inherit;
+        }
+
+        .media-slider-scrollbar .media-scrollbar-thumb:active {
+            cursor: grabbing;
+            height: 8px;
+            top: -2px;
+        }
+
+        .media-slider-scrollbar .media-scrollbar-thumb::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -10px;
+            bottom: -10px;
+        }
+
+        /* Styles for mobile and tablets */
+        @media only screen and (max-width: 1023px) {
+            .media-slider-wrapper .media-image-list {
+                gap: 10px;
+                margin-bottom: 15px;
+                scroll-snap-type: x mandatory;
             }
 
-            .image-fixed {
-                position: absolute;
-                margin-bottom: 110px;
-                margin-right: 110px;
+            .media-slider-wrapper .media-image-list .media-image-item {
+                width: 280px;
+                height: 200px;
             }
 
-            .image-fixed>img {
-                width: 300px;
+            .media-slider-scrollbar .media-scrollbar-thumb {
+                width: 20%;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="caro">
-        <div class="carousel-container">
-            <div class="image-fixed">
-                <img src="../assets/eclipse.svg" alt="">
+    <div class="media-wrapper">
+        <div class="media-container">
+            <div class="media-slider-wrapper">
+                <ul class="media-image-list">
+                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                </ul>
             </div>
-            <div class="carousel">
-                <div class="carousel-item center">
-                    <img src="../assets/apollocert.jpg" alt="Image 1">
-                    <div class="slanttextbox">
-                        <div class="slanttext">
-                            <div class="slanthead">Apollo Hospital, Jubilee Hills</div>
-                            <ul class="slantpoints">
-                                <li>First JCI Accreditation </li>
-                                <li>Champion Award </li>
-                                <li>Best Employee Award (2008) </li>
-                            </ul>
-                        </div>
-                    </div>
+
+            <div class="media-slider-scrollbar">
+                <div class="media-scrollbar-track">
+                    <div class="media-scrollbar-thumb"></div>
                 </div>
-                <div class="carousel-item right">
-                    <img src="../assets/wingemp.jpg" alt="Image 2">
-                    <div class="slanttextbox">
-                        <div class="slanttext">
-                            <div class="slanthead">Wingherry Technology Private Limited</div>
-                            <ul class="slantpoints">
-                                <li>Best Enterprises Award (2020) for Innovative Creation,  </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item left">
-                    <img src="../assets/yuktha-logo.svg" alt="Image 3">
-                    <div class="slanttextbox">
-                        <div class="slanttext">
-                            <div class="slanthead">Yukthaa Constructions</div>
-                            <ul class="slantpoints">
-                                <li>Best Middle-Class Affordable Construction Company Award (2023) </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item behind">
-                    <img src="../assets/bestemp.jpg" alt="Image 4">
-                    <div class="slanttextbox">
-                        <div class="slanttext">
-                            <div class="slanthead">Biachri</div>
-                            <ul class="slantpoints">
-                                <li>Best Employee Award (2014) for outstanding performance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <!-- Move buttons below the slider -->
+            <div class="media-slider-controls">
+                <button id="media-prev-slide" class="media-slide-button material-symbols-rounded">
+                    chevron_left
+                </button>
+                <button id="media-next-slide" class="media-slide-button material-symbols-rounded">
+                    chevron_right
+                </button>
             </div>
         </div>
     </div>
 
     <script>
-        let index = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-        const totalSlides = slides.length;
+        const initSlider = () => {
+            const imageList = document.querySelector(".media-slider-wrapper .media-image-list");
+            const prevButton = document.querySelector("#media-prev-slide");
+            const nextButton = document.querySelector("#media-next-slide");
+            const sliderScrollbar = document.querySelector(".media-container .media-slider-scrollbar");
+            const scrollbarThumb = sliderScrollbar.querySelector(".media-scrollbar-thumb");
+            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
-        // Function to update the carousel class positions
-        function updateClasses() {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('left', 'center', 'right', 'behind');
+            // Handle scrollbar thumb drag
+            scrollbarThumb.addEventListener("mousedown", (e) => {
+                const startX = e.clientX;
+                const thumbPosition = scrollbarThumb.offsetLeft;
+                const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+                const handleMouseMove = (e) => {
+                    const deltaX = e.clientX - startX;
+                    const newThumbPosition = thumbPosition + deltaX;
+                    const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                    const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+                    scrollbarThumb.style.left = `${boundedPosition}px`;
+                    imageList.scrollLeft = scrollPosition;
+                };
+
+                const handleMouseUp = () => {
+                    document.removeEventListener("mousemove", handleMouseMove);
+                    document.removeEventListener("mouseup", handleMouseUp);
+                };
+
+                document.addEventListener("mousemove", handleMouseMove);
+                document.addEventListener("mouseup", handleMouseUp);
             });
-            slides[index].classList.add('center');
-            slides[(index + 1) % totalSlides].classList.add('right');
-            slides[(index + 2) % totalSlides].classList.add('behind');
-            slides[(index + 3) % totalSlides].classList.add('left');
 
-        }
+            // Slide images
+            prevButton.addEventListener("click", () => {
+                imageList.scrollBy({ left: -imageList.clientWidth, behavior: "smooth" });
+            });
 
-        // Function to show the next slide
-        function showNextSlide() {
-            index = (index + 1) % totalSlides;
-            updateClasses();
-        }
-        setInterval(showNextSlide, 5000);
+            nextButton.addEventListener("click", () => {
+                imageList.scrollBy({ left: imageList.clientWidth, behavior: "smooth" });
+            });
 
-        // Initial class setup
-        updateClasses();
+            // Update scrollbar thumb position
+            const updateScrollThumbPosition = () => {
+                const scrollPosition = imageList.scrollLeft;
+                const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+                scrollbarThumb.style.left = `${thumbPosition}px`;
+            };
+
+            imageList.addEventListener("scroll", updateScrollThumbPosition);
+        };
+
+        window.addEventListener("resize", initSlider);
+        window.addEventListener("load", initSlider);
     </script>
 </body>
-
 </html>

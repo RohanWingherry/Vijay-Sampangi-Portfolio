@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="main-portfolio">
@@ -576,28 +577,35 @@
                         <div class="content-holder-heading">Media</div>
                         <div class="lines line"></div>
                     </div>
-                    <div class="media-box">
-                        <div class="media-holder">
-                            <div class="media-yt">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/hFX0AskzmwY?si=Ykb5Re5eRmsflVHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="media-wrapper">
+                        <div class="media-container">
+                            <div class="media-slider-wrapper">
+                                <ul class="media-image-list">
+                                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                                    <iframe class="media-image-item" src="https://www.youtube.com/embed/hFX0AskzmwY" allowfullscreen></iframe>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="media-holder">
-                            <div class="media-yt">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/vbqFl62-3DY?si=uQyY9bylI-eESC1y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                            <div class="media-slider-scrollbar">
+                                <div class="media-scrollbar-track">
+                                    <div class="media-scrollbar-thumb"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="media-holder">
-                            <div class="media-yt">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/4sspVwvJy38?si=Xr7OOsS4RayKQeFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="media-holder">
-                            <div class="media-yt">
-                                <img src="../assets/mediaspb.jpg" alt="">
+                            <!-- Move buttons below the slider -->
+                            <div class="media-slider-controls">
+                                <button id="media-prev-slide" class="media-slide-button material-symbols-rounded">
+                                    chevron_left
+                                </button>
+                                <button id="media-next-slide" class="media-slide-button material-symbols-rounded">
+                                    chevron_right
+                                </button>
                             </div>
                         </div>
                     </div>
+                
+                    
                 </div>
                 <!-- Media End -->
 
