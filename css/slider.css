@@ -178,16 +178,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     /* background: #f1f4fd; */
     width: 100%;
-    border: 1px solid black;
   }
   
   .container {
     max-width: 1200px;
-    width: 95%;
-    border: 1px solid black;
+    width: 100%;
 
   }
   
@@ -243,8 +241,8 @@
   }
   
   .slider-wrapper .image-list .image-item {
-    width: 325px;
-    height: 400px;
+    width: 400px;
+    height: 325px;
     object-fit: cover;
   }
   
@@ -308,8 +306,8 @@
     }
   
     .slider-wrapper .image-list .image-item {
-      width: 280px;
-      height: 380px;
+      width: 320px;
+      height: 250px;
     }
   
     .slider-scrollbar .scrollbar-thumb {
