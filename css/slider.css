@@ -244,6 +244,8 @@
     width: 400px;
     height: 325px;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
   }
   
   .container .slider-scrollbar {
