@@ -110,18 +110,88 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-document.getElementById("contactForm").onsubmit = function(event) {
-  const textarea = document.getElementById('enquireAbout');
-  const wordCount = textarea.value.trim().split(/\s+/).length;
-  
-  if (wordCount < 250) {
-    event.preventDefault(); 
-    alert("Please write at least 250 words.");
-  } else {
-    alert("Form Submitted!");
-    modal.style.display = "none";
+function checkWordLimit() {
+  var wordCount = document.getElementById("enquireAbout").value.split(/\s+/).length;
+  if (wordCount === 1 && document.getElementById("enquireAbout").value === "") {
+      wordCount = 0;
   }
-};
+  document.getElementById("wordCount").textContent = "Word count: " + wordCount + "/250";
+}
+
+// Function to validate form
+function validateForm() {
+  var firstName = document.getElementById("firstName").value.trim();
+  var lastName = document.getElementById("lastName").value.trim();
+  var organisation = document.getElementById("organisation").value.trim();
+  var title = document.getElementById("title").value.trim();
+  var businessEmail = document.getElementById("businessEmail").value.trim();
+  var enquireAbout = document.getElementById("enquireAbout").value.trim();
+
+document.getElementById('firstName').addEventListener('input', function(event) {
+    event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+});
+document.getElementById('lastName').addEventListener('input', function(event) {
+  event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+});
+document.getElementById('organisation').addEventListener('input', function(event) {
+  let value = event.target.value;
+
+  value = value.replace(/[^a-zA-Z ]/g, '');
+  value = value.replace(/^\s+/, '');
+
+  event.target.value = value;
+});
+document.getElementById('title').addEventListener('input', function(event) {
+  let value = event.target.value;
+
+  value = value.replace(/[^a-zA-Z ]/g, '');
+  value = value.replace(/^\s+/, '');
+
+  event.target.value = value;
+});
+document.getElementById('businessEmail').addEventListener('input', function(event) {
+  event.target.value = event.target.value.replace(/[^a-zA-Z0-9@.-_]/g, '');
+});
+document.getElementById('enquireAbout').addEventListener('input', function(event) {
+  let value = event.target.value;
+  if (value.length === 1 && !/[a-zA-Z]/.test(value.charAt(0))) {
+    event.target.value = '';
+  }
+});
+
+removeErrorBorders();
+
+  if (!firstName || !lastName || !organisation || !title || !businessEmail || !enquireAbout) {
+      alert("Please fill out all required fields.");
+      if (!firstName) {
+          document.getElementById("firstName").classList.add("error");
+      }
+      if (!lastName) {
+          document.getElementById("lastName").classList.add("error");
+      }
+      if (!organisation) {
+          document.getElementById("organisation").classList.add("error");
+      }
+      if (!title) {
+          document.getElementById("title").classList.add("error");
+      }
+      if (!businessEmail) {
+          document.getElementById("businessEmail").classList.add("error");
+      }
+      if (!enquireAbout) {
+          document.getElementById("enquireAbout").classList.add("error");
+      }
+  } else {
+      alert("Form submitted successfully!");
+      modal.style.display = "none";
+  }
+}
+function removeErrorBorders() {
+  var fields = document.querySelectorAll('input, textarea');
+  fields.forEach(function(field) {
+      field.classList.remove("error");
+  });
+}
 
 // Text area
 function checkWordLimit() {
@@ -143,16 +213,13 @@ function checkWordLimit() {
 window.addEventListener("load", () => {
   const loader = document.querySelector(".spin-container");
 
-  // Ensure the loader is visible for at least 5 seconds
   setTimeout(() => {
-    // Add the class to hide the loader (assuming you have CSS for the transition)
     loader.classList.add("loader-hidden");
 
-    // When the transition ends, remove the loader from the DOM
     loader.addEventListener("transitionend", () => {
       document.body.removeChild(loader);
     });
-  }, 2000); // 5000ms = 5 seconds
+  }, 0);
 });
 
 
