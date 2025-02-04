@@ -535,7 +535,9 @@
     justify-content: center;
     width: 100%;
   }
-  
+  #contactForm .error {
+    border: 1px solid red;
+}
   
 
 @media (min-width:1024px) and (max-width:1298px) {
