@@ -3,16 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
     const sidebarText = document.getElementById('sidebar-text');
     const closeSidebarButton = document.getElementById('close-sidebar');
+    const overlay = document.querySelector('.overlay');
 
     // Function to open the sidebar with specific content
     const openSidebar = (content) => {
         sidebarText.innerHTML = content; // Populate sidebar with HTML content
         sidebar.classList.add('active'); // Show the sidebar
+        overlay.classList.add('active'); // Show the overlay
     };
 
     // Function to close the sidebar
     const closeSidebar = () => {
         sidebar.classList.remove('active'); // Hide the sidebar
+        overlay.classList.remove('active'); // Hide the overlay
     };
 
     // Attach click events to each "View Details" button
@@ -27,13 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close the sidebar when clicking the "OK" button
     closeSidebarButton.addEventListener('click', closeSidebar);
 
-    // Close sidebar when clicking outside of it
-    document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && !e.target.classList.contains('viewdetails')) {
-            closeSidebar();
-        }
-    });
+    // Close sidebar when clicking outside of it (on the overlay)
+    overlay.addEventListener('click', closeSidebar);
 });
-
-
-
