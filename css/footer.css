@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color:#8BD8BD;
+    background-color:rgba(202, 220, 252);
     gap: 20px;
 }
 .main-footer .main-footer-info{

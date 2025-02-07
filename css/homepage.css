@@ -82,13 +82,13 @@
 .main-portfolio   #scroll-progress-bar {
     width: 0%;
     height: 100%;
-    background-color:#8BD8BD;
+    background-color:#00246B;
     transition: width 0.5s ease-out;
 }
 
 /* Home Content Section*/
 .main-portfolio .main-home-page-content{
-    background-color: white;
+    background-color: rgba(202, 220, 252, 0.5);
     width: 100%;
 }
 .main-home-page-content .homepage-image-section{
@@ -347,7 +347,7 @@
 }
 
 .main-into-section .main-into #getintouchbtn{
-    background-color: #8BD8BD;
+    background-color: #00246B;
     font-size: 18px;
     font-weight: 400;
     margin-top: 15px;
@@ -522,7 +522,7 @@
   }
   
 #contactForm  #submitBtn {
-    background-color: #8BD8BD;
+    background-color: #00246B;
     color: white;
     padding: 8px 16px;
     border: none;

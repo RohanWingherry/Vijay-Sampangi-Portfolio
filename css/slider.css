@@ -49,6 +49,7 @@
   max-width: 260px;
   width: 100%;
   max-height: 250px;
+  height: 100%;
   /* padding: 5px; */
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -63,6 +64,8 @@
   border-radius: 5px;
   object-fit: cover;
   background-color: white;
+  border: 1px solid black;
+
 }
 
 .left {
@@ -224,6 +227,60 @@
   .slider-wrapper .slide-button#next-slide {
     right: -25px;
   }
+  .image-list {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    list-style: none;
+    scrollbar-width: none;
+    padding: 2px;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    /* margin: 2px; */
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-title {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    width: 100%;
+    font-family: "Poppins", serif;
+  }
+  .image-para{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: gray;
+  }
+  .image-item {
+    width: 400px;
+    height: 325px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  
+  
+  .image-list:hover .image-container:not(:hover) {
+    filter: blur(1px); /* Blurs non-hovered items */
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+}
+
+  
   
   .slider-wrapper .image-list {
     display: grid;
@@ -234,6 +291,7 @@
     margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
+    width: 100%;
   }
   
   .slider-wrapper .image-list::-webkit-scrollbar {
@@ -241,11 +299,10 @@
   }
   
   .slider-wrapper .image-list .image-item {
-    width: 400px;
+    max-width: 400px;
     height: 325px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 4px 4px 0px #00000040;
   }
   
   .container .slider-scrollbar {
@@ -308,8 +365,9 @@
     }
   
     .slider-wrapper .image-list .image-item {
-      width: 320px;
+      max-width: 320px;
       height: 250px;
+      object-fit: cover;
     }
   
     .slider-scrollbar .scrollbar-thumb {
@@ -317,3 +375,10 @@
     }
   }
   
+  @media (max-width:400px) {
+    .slider-wrapper .image-list .image-item {
+      max-width: 300px;
+      height: 250px;
+      object-fit: cover;
+    }
+  }

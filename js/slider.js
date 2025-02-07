@@ -97,3 +97,20 @@
         window.addEventListener("load", initSlider);
 
         
+
+        document.querySelectorAll(".image-container").forEach((container) => {
+            container.addEventListener("mouseenter", function () {
+              let iframe = this.querySelector("iframe");
+              if (iframe) {
+                iframe.src = this.getAttribute("data-video");
+              }
+            });
+          
+            container.addEventListener("mouseleave", function () {
+              let iframe = this.querySelector("iframe");
+              if (iframe) {
+                iframe.src = iframe.src.split("?")[0]; // Reset video
+              }
+            });
+          });
+          
