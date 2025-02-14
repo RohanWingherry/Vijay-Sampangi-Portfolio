@@ -113,4 +113,20 @@
               }
             });
           });
+
+// Get the video and hover container elements
+const video = document.getElementById('video-item-play');
+const hoverContainer = document.getElementById('video-item-hover');
+
+// Play the video when hovering over the container
+hoverContainer.addEventListener('mouseenter', function () {
+    video.play();
+});
+
+// Pause the video when the mouse leaves the container
+hoverContainer.addEventListener('mouseleave', function () {
+    video.pause();
+    video.currentTime = 0;  // Reset video to the beginning when paused
+});
+
           
