@@ -119,14 +119,6 @@ function checkWordLimit() {
 }
 
 // Function to validate form
-function validateForm() {
-  var firstName = document.getElementById("firstName").value.trim();
-  var lastName = document.getElementById("lastName").value.trim();
-  var organisation = document.getElementById("organisation").value.trim();
-  var title = document.getElementById("title").value.trim();
-  var businessEmail = document.getElementById("businessEmail").value.trim();
-  var enquireAbout = document.getElementById("enquireAbout").value.trim();
-
 document.getElementById('firstName').addEventListener('input', function(event) {
     event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
 });
@@ -159,7 +151,15 @@ document.getElementById('enquireAbout').addEventListener('input', function(event
   }
 });
 
-removeErrorBorders();
+function validateForm() {
+  var firstName = document.getElementById("firstName").value.trim();
+  var lastName = document.getElementById("lastName").value.trim();
+  var organisation = document.getElementById("organisation").value.trim();
+  var title = document.getElementById("title").value.trim();
+  var businessEmail = document.getElementById("businessEmail").value.trim();
+  var enquireAbout = document.getElementById("enquireAbout").value.trim();
+
+  removeErrorBorders();
 
   if (!firstName || !lastName || !organisation || !title || !businessEmail || !enquireAbout) {
       alert("Please fill out all required fields.");
@@ -184,6 +184,7 @@ removeErrorBorders();
   } else {
       alert("Form submitted successfully!");
       modal.style.display = "none";
+      document.getElementById("contactForm").reset();
   }
 }
 function removeErrorBorders() {
