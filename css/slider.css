@@ -257,12 +257,14 @@
     color: #333;
     width: 100%;
     font-family: "Poppins", serif;
+    text-align: left;
   }
   .image-para{
     font-family: "Poppins", serif;
     font-weight: 500;
     font-size: 16px;
     color: gray;
+    text-align: left;
   }
   .image-item {
     width: 400px;
