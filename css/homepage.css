@@ -337,7 +337,9 @@
     font-weight: 350;
     line-height: 48px;
 }
-
+.main-into-section .main-into #vijay #vijay-quali{
+    font-size: 14px;
+}
 .main-into-section .main-into #chairman-desc {
     margin-top: 10px;
     font-size: 18px;
@@ -439,9 +441,15 @@
         transform: translateY(0); 
     }
 }
+.qualification-texts>span{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00246B;
+}
 
 /* Modal for Get in Touch */
-.modal {
+/* .modal {
     display: none; 
     position: fixed;
     z-index: 1; 
@@ -538,11 +546,12 @@
   #contactForm .error {
     border: 1px solid red;
 }
-  
+   */
 
 @media (min-width:1024px) and (max-width:1298px) {
     .main-intro-profile-section .main-into-section{
-        max-width: 460px;
+        border: 2px solid red;
+        max-width: 480px;
         width: 100%;
         margin-left: 30px;
     }
@@ -695,6 +704,12 @@
         top: 600px;
         left: 200px; 
     }
+
+}
+@media (max-width:533px) {
+    .main-into-section .main-into #chairman {
+        height: 80px;
+    }
 }
 @media (max-width:505px) {
     .main-into-section .main-into #chairman-desc {
@@ -729,12 +744,29 @@
         margin-right: 20px;
     }
 }
+@media (max-width:435px) {
+    #vijay #vijay-quali{
+        position: absolute;
+        top: 90px;
+        right: 0;
+    }
+    .main-into-section .main-into #chairman{
+        margin-top: 5px;
+    }
+    
+}
 @media (max-width:391px) {
     .main-into-section .main-into #chairman-desc {
         height: 360px;
     }
     .main-profile-section .profile-sec #profile-bg{
         width: 100%;
+    }
+
+}
+@media (max-width:382px) {
+    .main-into-section .main-into #chairman{
+        height: 130px;
     }
 }
 @media (max-width:366px) {
@@ -751,6 +783,7 @@
     .main-into-section .main-into #chairman-desc {
         height: 450px;
     }
+
 }
 @media (max-width:332px) {
     .main-into-section .main-into #chairman-desc {
