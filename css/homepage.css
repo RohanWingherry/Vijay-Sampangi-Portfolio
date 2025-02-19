@@ -550,7 +550,6 @@
 
 @media (min-width:1024px) and (max-width:1298px) {
     .main-intro-profile-section .main-into-section{
-        border: 2px solid red;
         max-width: 480px;
         width: 100%;
         margin-left: 30px;
@@ -764,30 +763,49 @@
     }
 
 }
-@media (max-width:382px) {
+@media (max-width:372px) {
     .main-into-section .main-into #chairman{
         height: 130px;
+    }
+    .main-into-section .main-into #chairman-desc {
+        height: 380px;
+    }
+    .main-into-section .curl-arrow{
+        top: 780px;
+        left: 200px; 
     }
 }
 @media (max-width:366px) {
     .main-into-section .main-into #chairman-desc {
         height: 400px;
     }
-}
-@media (max-width:358px) {
-    .main-into-section .main-into #chairman-desc {
-        height: 410px;
+    .main-into-section .curl-arrow{
+        top: 820px;
+        left: 200px; 
     }
 }
-@media (max-width:336px) {
+@media (max-width:342px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 425px;
+    }
+    .main-into-section .curl-arrow{
+        top: 850px;
+        left: 200px; 
+    }
+}
+@media (max-width:338px) {
     .main-into-section .main-into #chairman-desc {
         height: 450px;
     }
 
 }
-@media (max-width:332px) {
+@media (max-width:321px) {
     .main-into-section .main-into #chairman-desc {
-        height: 450px;
+        height: 495px;
+    }
+    .main-into-section .curl-arrow{
+        top: 950px;
+        left: 200px; 
     }
 }
 @media (max-width:315px) {
@@ -800,9 +818,23 @@
 
     
 }
+@media (max-width:302px) {
+    .main-into-section .main-into #chairman-desc {
+        height: 540px;
+    }
+    .main-profile-section .profile-sec #profile-pic{
+        width: 100%;
+    }
+
+    
+}
 @media (max-width:296px) {
     .main-into-section .main-into #chairman-desc {
         height: 100%;
+    }
+    .main-into-section .curl-arrow{
+        top: 950px;
+        left: 200px; 
     }
 }
   

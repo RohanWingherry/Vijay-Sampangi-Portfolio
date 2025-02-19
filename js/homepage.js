@@ -213,7 +213,7 @@ document.getElementById("wingherry-image-section").addEventListener("click", han
 // Get in touch
 
 document.querySelector(".btn").addEventListener("click",()=>{
-  window.open('https://docs.google.com/forms/d/e/1FAIpQLSegjlqoGTvRL_ULuzGAKbxRLtOrffA0qJFlAtyyZ0MJ0BVYbw/viewform?usp=dialog','_blank')
+  window.open('https://prettyform.addxt.com/a/form/vf/1FAIpQLSegjlqoGTvRL_ULuzGAKbxRLtOrffA0qJFlAtyyZ0MJ0BVYbw','_blank')
 })
 
 
