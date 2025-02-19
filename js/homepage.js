@@ -210,6 +210,13 @@ document.getElementById("wingherry-image-section").addEventListener("click", han
 //   }
 // }
 
+// Get in touch
+
+document.querySelector(".btn").addEventListener("click",()=>{
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSegjlqoGTvRL_ULuzGAKbxRLtOrffA0qJFlAtyyZ0MJ0BVYbw/viewform?usp=dialog','_blank')
+})
+
+
 // Spinner
 window.addEventListener("load", () => {
   const loader = document.querySelector(".spin-container");
