@@ -691,26 +691,32 @@
         width: 100%;
     }
     .main-into-section .curl-arrow{
-        top: 550px;
+        top: 500px;
         left: 200px; 
     }
 }
-@media (max-width:620px) {
+@media (max-width:626px) {
     .main-into-section .main-into #chairman-desc {
         height: 225px;
     }
     .main-into-section .curl-arrow{
-        top: 600px;
+        top: 550px;
         left: 200px; 
     }
 
 }
-@media (max-width:533px) {
+
+@media (max-width:551px) {
     .main-into-section .main-into #chairman {
         height: 80px;
     }
+    .main-into-section .curl-arrow{
+        top: 570px;
+        left: 200px; 
+    }
+    
 }
-@media (max-width:505px) {
+@media (max-width:512px) {
     .main-into-section .main-into #chairman-desc {
         height: 270px;
     }
@@ -763,7 +769,7 @@
     }
 
 }
-@media (max-width:372px) {
+@media (max-width:383px) {
     .main-into-section .main-into #chairman{
         height: 130px;
     }
