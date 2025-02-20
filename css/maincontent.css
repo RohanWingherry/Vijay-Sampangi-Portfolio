@@ -253,6 +253,12 @@
   background-color: #E4EDFD;
   transform: scale(1.03);
 }
+#middle-certification{
+  background-color: #E4EDFD;
+}
+#middle-certification:hover{
+  background-color: #fff;
+}
 
 
 .certificate-header {
