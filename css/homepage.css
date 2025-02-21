@@ -843,4 +843,11 @@
         left: 200px; 
     }
 }
+@media (max-width:288px) {
+    #vijay #vijay-quali{
+        position: absolute;
+        top: 135px;
+        right: 0;
+    }
+}
   
