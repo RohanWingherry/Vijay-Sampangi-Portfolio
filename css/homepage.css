@@ -360,10 +360,10 @@
 }
 .main-into-section .curl-arrow{
     position: relative;
-    top: 150px;
-    left: 50px;
-    height: 60px;
-    width: 60px;
+    top: 80px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
 }
 .main-into-section .curl-arrow>img{
     height: 100%;

@@ -213,7 +213,8 @@ document.getElementById("wingherry-image-section").addEventListener("click", han
 // Get in touch
 
 document.querySelector(".btn").addEventListener("click",()=>{
-  window.open('https://prettyform.addxt.com/a/form/vf/1FAIpQLSegjlqoGTvRL_ULuzGAKbxRLtOrffA0qJFlAtyyZ0MJ0BVYbw','_blank')
+  // window.open('https://prettyform.addxt.com/a/form/vf/1FAIpQLSegjlqoGTvRL_ULuzGAKbxRLtOrffA0qJFlAtyyZ0MJ0BVYbw','_blank')
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSegjlqoGTvRL_ULuzGAKbxRLtOrffA0qJFlAtyyZ0MJ0BVYbw/viewform?usp=dialog')
 })
 
 
@@ -232,6 +233,39 @@ window.addEventListener("load", () => {
 
 
 
+// certifications
+document.addEventListener("DOMContentLoaded", function () {
+  const certifications = document.querySelectorAll(".certification");
+  const middleCertification = document.getElementById("middle-certification");
+
+  certifications.forEach((cert) => {
+    cert.addEventListener("mouseenter", () => {
+      certifications.forEach((otherCert) => {
+        if (otherCert !== cert) {
+          otherCert.style.backgroundColor = "white";
+        }
+      });
+
+      if (cert !== middleCertification) {
+        cert.style.backgroundColor = "#E4EDFD";
+      } else {
+        cert.style.backgroundColor = "#E4EDFD";
+        cert.style.color = "white";
+      }
+    });
+
+    cert.addEventListener("mouseleave", () => {
+      certifications.forEach((otherCert) => {
+        if (otherCert !== middleCertification) {
+          otherCert.style.backgroundColor = "white";
+        }
+      });
+
+      middleCertification.style.backgroundColor = "#E4EDFD";
+      middleCertification.style.color = "black";
+    });
+  });
+});
 
 
 

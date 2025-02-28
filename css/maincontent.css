@@ -226,21 +226,24 @@
   border-radius: 8px;
   padding: 25px;
   border: 0.5px solid #C7C7C7;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.3s ease;
   max-width: 90%;
   width: 100%;
   box-shadow: 0px 4px 4px 0px #00000040;
   position: relative;
-  border-top: 4px solid #00246B;
+  /* border-top: 4px solid #00246b54; */
+  background-color: white;
 }
 
 .certification::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 4px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   background-color: #00246B;
   transition: width 0.8s ease;
 }
@@ -253,13 +256,20 @@
   background-color: #E4EDFD;
   transform: scale(1.03);
 }
-#middle-certification{
+
+/* Middle certification special case */
+#middle-certification {
   background-color: #E4EDFD;
 }
-#middle-certification:hover{
-  background-color: #fff;
+
+#middle-certification:hover {
+  background-color: #E4EDFD;
+  color: white;
 }
 
+.certification:hover .certificate-header .cer-head {
+  font-weight: 700;
+}
 
 .certificate-header {
   display: flex;
@@ -360,7 +370,7 @@
 .skill .skill-head{
   font-family: Prompt;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 26px;
   text-align: center;
   text-underline-position: from-font;
