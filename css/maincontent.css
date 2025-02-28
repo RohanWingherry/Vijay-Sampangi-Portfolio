@@ -539,6 +539,7 @@
 @media (max-width:1348px) {
   .skill-box-holder{
     justify-content: space-evenly;
+    gap: 25px;
   }
 }
 

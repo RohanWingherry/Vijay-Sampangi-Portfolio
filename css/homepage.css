@@ -357,6 +357,8 @@
     border-radius: 20px;
     cursor: pointer;
     color: white;
+    height: 40px;
+    width: max-content;
 }
 .main-into-section .curl-arrow{
     position: relative;
